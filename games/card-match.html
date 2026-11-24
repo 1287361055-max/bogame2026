@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>记忆翻牌 · BOGAME 2026</title>
+<meta name="description" content="翻开成对的星图卡片，用最少步数清空牌桌。" />
+<link rel="icon" type="image/svg+xml" href="../assets/showcase/icon.svg" />
+<link rel="stylesheet" href="../assets/css/arcade.css" />
+</head>
+<body>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="btn ghost" href="../index.html">← 返回大厅</a>
+    <div class="brand"><span class="dot"></span> 记忆翻牌</div>
+    <div class="spacer"></div>
+    <div class="stat">得分 <b id="score">0</b></div>
+    <div class="stat">最高 <b id="best">0</b></div>
+    <div class="stat"><span id="extra">0 步 · 0s</span></div>
+    <button class="btn" id="restart" type="button">重开</button>
+    <button class="btn ghost" id="muteBtn" type="button">🔊</button>
+  </div>
+
+  <div class="stage">
+    <div class="board">
+      <div class="flip-grid" id="grid"></div>
+      <div class="overlay" id="ov">
+        <h2></h2>
+        <p></p>
+        <div class="big"></div>
+        <button class="btn primary" id="ovBtn" type="button">开始游戏</button>
+      </div>
+
+    </div>
+
+    <aside class="side">
+      <h3>玩法说明</h3>
+      <p>牌桌上共有 16 张卡，组成 8 对星图符号。每次翻开两张，符号相同则配对成功并保留翻开。</p>
+      <ul>
+        <li>每配对一组 +100 分，每步 −5 分</li>
+        <li>用时越短，最终得分越高</li>
+        <li>全部配对成功后结算</li>
+      </ul>
+      <h3 style="margin-top:22px">操作</h3>
+      <p>点击 / 轻触卡片翻开。找齐全部 8 对即获胜。</p>
+    </aside>
+  </div>
+
+  <div class="footer">
+    BOGAME 2026 · 星轨游戏盒 &nbsp;|&nbsp; 记忆翻牌 &nbsp;|&nbsp; 分数保存在浏览器本地
+  </div>
+
+</div>
+<script src="../assets/js/arcade.js"></script>
+<script src="js/card-match.js"></script>
+</body>
+</html>
