@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>霓虹贪吃蛇 · BOGAME 2026</title>
+<meta name="description" content="在霓虹网格中收集光点、不断变长的经典贪吃蛇。" />
+<link rel="icon" type="image/svg+xml" href="../assets/showcase/icon.svg" />
+<link rel="stylesheet" href="../assets/css/arcade.css" />
+</head>
+<body>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="btn ghost" href="../index.html">← 返回大厅</a>
+    <div class="brand"><span class="dot"></span> 霓虹贪吃蛇</div>
+    <div class="spacer"></div>
+    <div class="stat">得分 <b id="score">0</b></div>
+    <div class="stat">最高 <b id="best">0</b></div>
+    <button class="btn" id="restart" type="button">重开</button>
+    <button class="btn ghost" id="muteBtn" type="button">🔊</button>
+  </div>
+
+  <div class="stage">
+    <div class="board">
+      <canvas id="cv"></canvas>
+      <div class="overlay" id="ov">
+        <h2></h2>
+        <p></p>
+        <div class="big"></div>
+        <button class="btn primary" id="ovBtn" type="button">开始游戏</button>
+      </div>
+      <div class="touchpad">
+        <span></span><button type="button" data-dir="up">↑</button><span></span>
+        <button type="button" data-dir="left">←</button><button type="button" data-dir="down">↓</button><button type="button" data-dir="right">→</button>
+      </div>
+    </div>
+
+    <aside class="side">
+      <h3>玩法说明</h3>
+      <p>控制小蛇在 24×24 的网格中移动，吃到粉色光点即可变长并加分。撞到墙壁或自己的身体，本局结束。</p>
+      <ul>
+        <li>每吃一个光点 +10 分</li>
+        <li>得分越高，移动速度越快</li>
+        <li>最高分自动保存在本地</li>
+      </ul>
+      <h3 style="margin-top:22px">操作</h3>
+      <p><kbd>↑</kbd><kbd>↓</kbd><kbd>←</kbd><kbd>→</kbd> 或 <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> 控制方向。</p>
+      <p>手机上可滑动屏幕，或使用下方方向键。</p>
+    </aside>
+  </div>
+
+  <div class="footer">
+    BOGAME 2026 · 星轨游戏盒 &nbsp;|&nbsp; 霓虹贪吃蛇 &nbsp;|&nbsp; 分数保存在浏览器本地
+  </div>
+
+</div>
+<script src="../assets/js/arcade.js"></script>
+<script src="js/neon-snake.js"></script>
+</body>
+</html>
