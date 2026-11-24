@@ -1,0 +1,13 @@
+# 本地运行与编辑器产生的文件
+.DS_Store
+Thumbs.db
+*.log
+__pycache__/
+*.pyc
+
+# 本地预览截图（不纳入仓库）
+_shots/
+
+# 依赖目录（本项目零依赖，仅做兜底）
+node_modules/
+dist/
