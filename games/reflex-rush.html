@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>极速反应 · BOGAME 2026</title>
+<meta name="description" content="30 秒内点亮出现的光点，连击越高得分越猛。" />
+<link rel="icon" type="image/svg+xml" href="../assets/showcase/icon.svg" />
+<link rel="stylesheet" href="../assets/css/arcade.css" />
+</head>
+<body>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="btn ghost" href="../index.html">← 返回大厅</a>
+    <div class="brand"><span class="dot"></span> 极速反应</div>
+    <div class="spacer"></div>
+    <div class="stat">得分 <b id="score">0</b></div>
+    <div class="stat">最高 <b id="best">0</b></div>
+    <div class="stat"><span id="extra">连击 ×0 · 命中 0</span></div>
+    <button class="btn" id="restart" type="button">重开</button>
+    <button class="btn ghost" id="muteBtn" type="button">🔊</button>
+  </div>
+
+  <div class="stage">
+    <div class="board">
+      <canvas id="cv"></canvas>
+      <div class="meter"><i id="meterFill"></i></div>
+      <div class="overlay" id="ov">
+        <h2></h2>
+        <p></p>
+        <div class="big"></div>
+        <button class="btn primary" id="ovBtn" type="button">开始游戏</button>
+      </div>
+
+    </div>
+
+    <aside class="side">
+      <h3>玩法说明</h3>
+      <p>30 秒内点亮所有出现的光点，越快越准得分越高。</p>
+      <ul>
+        <li>命中 +10 分，连击额外加分</li>
+        <li>点空或目标超时会中断连击</li>
+        <li>限时结束结算总得分</li>
+      </ul>
+      <h3 style="margin-top:22px">操作</h3>
+      <p>鼠标点击或手指轻触光点。</p>
+    </aside>
+  </div>
+
+  <div class="footer">
+    BOGAME 2026 · 星轨游戏盒 &nbsp;|&nbsp; 极速反应 &nbsp;|&nbsp; 分数保存在浏览器本地
+  </div>
+
+</div>
+<script src="../assets/js/arcade.js"></script>
+<script src="js/reflex-rush.js"></script>
+</body>
+</html>
