@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>BOGAME 2026 · 星轨游戏盒</title>
+<meta name="description" content="BOGAME 2026 星轨游戏盒：六款开箱即玩的轻量网页小游戏，零依赖、纯前端，浏览器打开就能玩。" />
+<link rel="icon" type="image/svg+xml" href="assets/showcase/icon.svg" />
+<link rel="stylesheet" href="assets/css/arcade.css" />
+</head>
+<body>
+<div class="wrap">
+
+  <div class="topbar">
+    <div class="brand"><span class="dot"></span> BOGAME <span>2026 · 星轨游戏盒</span></div>
+    <div class="spacer"></div>
+    <div class="stat">共 <b id="gameCount">6</b> 款小游戏</div>
+    <button class="btn ghost" id="muteBtn" type="button">🔊 音效开</button>
+  </div>
+
+  <section class="hero">
+    <div class="kicker">BOGAME 2026 · MINI ARCADE</div>
+    <h1>星轨游戏盒</h1>
+    <p>六款开箱即玩的轻量网页小游戏。零依赖、纯前端、无需安装，<br />浏览器打开就能玩 —— 随时来一局，刷新你的最高分。</p>
+    <div class="actions">
+      <a class="btn primary" href="#games">开始游玩 →</a>
+      <a class="btn" href="#gallery">浏览展示图</a>
+      <a class="btn ghost" href="#about">关于本项目</a>
+    </div>
+    <div class="hint">💡 所有游戏共用本地高分存档，成绩自动保存在浏览器中。</div>
+  </section>
+
+  <h2 class="section-title" id="games">🎮 项目列表 <small>Game List · 点击卡片即可开始</small></h2>
+
+  <div style="max-width:420px;margin:0 0 20px;">
+    <input id="search" type="search" placeholder="搜索游戏名称 / 类型，例如：记忆、街机…"
+      aria-label="搜索游戏"
+      style="width:100%;padding:12px 16px;border-radius:12px;border:1px solid var(--line);
+             background:rgba(9,15,34,.86);color:var(--text);font-size:14px;font-family:var(--sans);outline:none;" />
+  </div>
+
+  <div class="grid" id="cardGrid">
+
+    <a class="card" href="games/neon-snake.html" data-k="霓虹贪吃蛇 街机 敏捷 snake arcade">
+      <img src="assets/showcase/game-snake.svg" alt="霓虹贪吃蛇 游戏界面展示图" />
+      <div class="body">
+        <div class="tag">01 / ARCADE</div>
+        <h3>霓虹贪吃蛇</h3>
+        <p>在霓虹网格里收集光点，越吃越长。别撞墙，也别撞上自己。</p>
+        <span class="go">开始游玩 →</span>
+      </div>
+    </a>
+
+    <a class="card" href="games/star-dodge.html" data-k="星轨闪避 敏捷 躲避 dodge action">
+      <img src="assets/showcase/game-dodge.svg" alt="星轨闪避 游戏界面展示图" />
+      <div class="body">
+        <div class="tag">02 / ACTION</div>
+        <h3>星轨闪避</h3>
+        <p>驾驶小飞船穿过陨石雨，活得越久分越高，考验走位与节奏。</p>
+        <span class="go">开始游玩 →</span>
+      </div>
+    </a>
+
+    <a class="card" href="games/card-match.html" data-k="记忆翻牌 记忆 益智 memory puzzle">
+      <img src="assets/showcase/game-memory.svg" alt="记忆翻牌 游戏界面展示图" />
+      <div class="body">
+        <div class="tag">03 / MEMORY</div>
+        <h3>记忆翻牌</h3>
+        <p>翻开成对的星图卡片，用最少的步数与最短的时间清空牌桌。</p>
+        <span class="go">开始游玩 →</span>
+      </div>
+    </a>
+
+    <a class="card" href="games/brick-breaker.html" data-k="弹球破砖 经典 街机 breakout classic">
+      <img src="assets/showcase/game-breaker.svg" alt="弹球破砖 游戏界面展示图" />
+      <div class="body">
+        <div class="tag">04 / CLASSIC</div>
+        <h3>弹球破砖</h3>
+        <p>移动能量挡板反弹光球，击碎整片砖阵，别让球落到底线。</p>
+        <span class="go">开始游玩 →</span>
+      </div>
+    </a>
+
+    <a class="card" href="games/stardust-2048.html" data-k="星尘合成 2048 益智 数字 puzzle">
+      <img src="assets/showcase/game-2048.svg" alt="星尘合成 2048 游戏界面展示图" />
+      <div class="body">
+        <div class="tag">05 / PUZZLE</div>
+        <h3>星尘合成 2048</h3>
+        <p>滑动合并同数值星尘，一路合成出 2048 星核，支持撤销一步。</p>
+        <span class="go">开始游玩 →</span>
+      </div>
+    </a>
+
+    <a class="card" href="games/reflex-rush.html" data-k="极速反应 反应 手速 reflex speed">
+      <img src="assets/showcase/game-reflex.svg" alt="极速反应 游戏界面展示图" />
+      <div class="body">
+        <div class="tag">06 / REFLEX</div>
+        <h3>极速反应</h3>
+        <p>点亮随机出现的光点，连击越多得分越高，挑战你的反应极限。</p>
+        <span class="go">开始游玩 →</span>
+      </div>
+    </a>
+
+  </div>
+
+  <h2 class="section-title" id="gallery">🖼️ 展示图集 <small>Showcase</small></h2>
+  <div class="gallery">
+    <figure><img src="assets/showcase/banner.svg" alt="项目横幅展示图" /><figcaption>项目横幅 · 星轨游戏盒</figcaption></figure>
+    <figure><img src="assets/showcase/hall.svg" alt="游戏大厅界面展示图" /><figcaption>游戏大厅 · 项目列表</figcaption></figure>
+    <figure><img src="assets/showcase/game-snake.svg" alt="霓虹贪吃蛇界面" /><figcaption>霓虹贪吃蛇</figcaption></figure>
+    <figure><img src="assets/showcase/game-dodge.svg" alt="星轨闪避界面" /><figcaption>星轨闪避</figcaption></figure>
+    <figure><img src="assets/showcase/game-memory.svg" alt="记忆翻牌界面" /><figcaption>记忆翻牌</figcaption></figure>
+    <figure><img src="assets/showcase/game-breaker.svg" alt="弹球破砖界面" /><figcaption>弹球破砖</figcaption></figure>
+    <figure><img src="assets/showcase/game-2048.svg" alt="星尘合成 2048 界面" /><figcaption>星尘合成 2048</figcaption></figure>
+    <figure><img src="assets/showcase/game-reflex.svg" alt="极速反应界面" /><figcaption>极速反应</figcaption></figure>
+  </div>
+
+  <h2 class="section-title" id="about">🛠️ 关于本项目 <small>About</small></h2>
+  <div class="side" style="max-width:none;">
+    <h3>轻量、离线、开箱即玩</h3>
+    <p>整个项目由原生 HTML / CSS / JavaScript 编写，不依赖任何框架或构建工具。
+      直接双击 <code>index.html</code> 即可游玩，也可以用任意静态服务器托管（含 GitHub Pages）。</p>
+    <ul>
+      <li><b>零依赖</b>：不需要 npm install，不需要联网加载资源。</li>
+      <li><b>统一体验</b>：共享顶栏、计分、音效与本地高分存档。</li>
+      <li><b>键盘 + 触屏</b>：桌面用方向键 / WASD / 鼠标，移动端支持触摸与滑动。</li>
+      <li><b>响应式</b>：画布自适应缩放，窄屏自动切换为单列布局。</li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    BOGAME 2026 · 星轨游戏盒 &nbsp;|&nbsp; 纯前端小游戏合集 &nbsp;|&nbsp; 使用 MIT 许可证<br />
+    分数保存在你的浏览器本地，清除站点数据即可重置。
+  </div>
+
+</div>
+
+<script src="assets/js/arcade.js"></script>
+<script>
+(function () {
+  "use strict";
+  const muteBtn = document.getElementById("muteBtn");
+  function syncMute() {
+    const m = window.Arcade.isMuted();
+    muteBtn.textContent = m ? "🔇 音效关" : "🔊 音效开";
+  }
+  syncMute();
+  muteBtn.addEventListener("click", function () {
+    window.Arcade.toggleMute();
+    syncMute();
+    window.Arcade.sfx("click");
+  });
+
+  const search = document.getElementById("search");
+  const cards = Array.prototype.slice.call(document.querySelectorAll("#cardGrid .card"));
+  const count = document.getElementById("gameCount");
+  search.addEventListener("input", function () {
+    const q = this.value.trim().toLowerCase();
+    let n = 0;
+    cards.forEach(function (c) {
+      const hit = !q || (c.dataset.k + " " + c.textContent).toLowerCase().indexOf(q) !== -1;
+      c.style.display = hit ? "" : "none";
+      if (hit) n++;
+    });
+    count.textContent = n;
+  });
+})();
+</script>
+</body>
+</html>
