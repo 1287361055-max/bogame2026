@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>星尘合成 2048 · BOGAME 2026</title>
+<meta name="description" content="滑动合并同数值星尘，合成 2048 星核。" />
+<link rel="icon" type="image/svg+xml" href="../assets/showcase/icon.svg" />
+<link rel="stylesheet" href="../assets/css/arcade.css" />
+</head>
+<body>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="btn ghost" href="../index.html">← 返回大厅</a>
+    <div class="brand"><span class="dot"></span> 星尘合成 2048</div>
+    <div class="spacer"></div>
+    <div class="stat">得分 <b id="score">0</b></div>
+    <div class="stat">最高 <b id="best">0</b></div>
+    <button class="btn ghost" id="undoBtn" type="button">撤销</button>
+    <button class="btn" id="restart" type="button">重开</button>
+    <button class="btn ghost" id="muteBtn" type="button">🔊</button>
+  </div>
+
+  <div class="stage">
+    <div class="board">
+      <div class="g2048" id="grid"></div>
+      <div class="overlay" id="ov">
+        <h2></h2>
+        <p></p>
+        <div class="big"></div>
+        <button class="btn primary" id="ovBtn" type="button">开始游戏</button>
+      </div>
+      <div class="touchpad">
+        <span></span><button type="button" data-dir="up">↑</button><span></span>
+        <button type="button" data-dir="left">←</button><button type="button" data-dir="down">↓</button><button type="button" data-dir="right">→</button>
+      </div>
+    </div>
+
+    <aside class="side">
+      <h3>玩法说明</h3>
+      <p>向四个方向滑动，相同数值的星尘会合并相加。目标是合成 2048 星核。</p>
+      <ul>
+        <li>合并时获得等值分数</li>
+        <li>可用“撤销”回退一步</li>
+        <li>棋盘填满且无法合并即结束</li>
+      </ul>
+      <h3 style="margin-top:22px">操作</h3>
+      <p>方向键 / <kbd>WASD</kbd> 或滑动棋盘；手机可用下方方向键。</p>
+    </aside>
+  </div>
+
+  <div class="footer">
+    BOGAME 2026 · 星轨游戏盒 &nbsp;|&nbsp; 星尘合成 2048 &nbsp;|&nbsp; 分数保存在浏览器本地
+  </div>
+
+</div>
+<script src="../assets/js/arcade.js"></script>
+<script src="js/stardust-2048.js"></script>
+</body>
+</html>
